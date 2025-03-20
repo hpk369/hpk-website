@@ -7,6 +7,7 @@
 ## Overview
 
 A modern, responsive portfolio website built with HTML, CSS, and JavaScript. This personal portfolio showcases my skills, projects, and professional experience with an elegant, creative design and smooth animations.
+- View Portfolio: [Click Here!](https://hpk369.github.io/hpk-website/)
 
 ## Features
 
@@ -85,8 +86,8 @@ This portfolio template is designed to be easily customizable:
 Feel free to reach out if you have questions or suggestions:
 
 - GitHub: [@hpk369](https://github.com/hpk369)
-- Email: [your-email@example.com](mailto:keshruwalaharsh@gmail.com)
-- LinkedIn: [Your Name](http://www.linkedin.com/in/hpk369)
+- Email: [keshruwalaharsh@gmail.com](mailto:keshruwalaharsh@gmail.com)
+- LinkedIn: [Harsh P Keshruwala](http://www.linkedin.com/in/hpk369)
 
 ---
 
