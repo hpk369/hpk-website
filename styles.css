@@ -499,6 +499,10 @@ footer {
     transform: translateY(-3px);
 }
 
+.social-image {
+    object-fit: fill;
+}
+
 /* Decorative Elements */
 .accent-circle {
     position: absolute;
