@@ -7,11 +7,26 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Custom Cursor -->
+    <div class="cursor">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87c.48 0 .72-.58.38-.92L5.94 2.77a.5.5 0 0 0-.44.44Z" fill="#ffffff" stroke="#000000" stroke-width="0.5"/>
+        </svg>
+    </div>
+
+    <!-- Animated Background -->
+    <div class="bg-gradient"></div>
+
     <!-- Header & Navigation -->
     <header>
         <div class="container">
             <nav>
                 <a href="#" class="logo">HPK</a>
+                <button class="mobile-menu-btn" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
                 <ul class="nav-links">
                     <li><a href="#about" class="nav-link">About</a></li>
                     <li><a href="#projects" class="nav-link">Projects</a></li>
@@ -29,12 +44,12 @@
         <div class="container">
             <div class="grid">
                 <div class="hero-content">
-                    <h1>Harsh P Keshruwala</h1>
+                    <h1 class="gradient-text glow">Harsh P Keshruwala</h1>
                     <div class="hero-subtitle">User Support Technician</div>
                     <p class="large-text">I'm passionate about keeping applications running smoothly through proactive monitoring, rapid incident resolution, and data-driven problem solving.</p>
-                    <div style="margin-top: 2rem;">
+                    <div class="btn-group">
                         <a href="#projects" class="btn btn-primary">View My Work</a>
-                        <a href="#contact" class="btn btn-secondary" style="margin-left: 1rem;">Get In Touch</a>
+                        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
                     </div>
                 </div>
                 <div class="hero-image">
@@ -42,17 +57,12 @@
                 </div>
             </div>
         </div>
-        <div class="accent-circle top-right"></div>
-        <div class="floating-shape shape-1"></div>
-        <div class="floating-shape shape-2"></div>
-        <div class="floating-shape shape-3"></div>
-        <div class="floating-shape shape-4"></div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <h2>About Me</h2>
+            <h2 class="gradient-text-subtle glow-subtle">About Me</h2>
             <div class="grid">
                 <div class="about-content">
                     <p class="large-text">Hello! I'm a passionate application support professional focused on incident resolution, system monitoring, and keeping critical systems reliable.</p>
@@ -70,7 +80,7 @@
     <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
-            <h2>Featured Projects</h2>
+            <h2 class="gradient-text-subtle glow-subtle">Featured Projects</h2>
             <p class="large-text">Here are some of my recent works.</p>
             <div class="projects-grid">
 
@@ -169,7 +179,7 @@
     <!-- Skills Section -->
     <section id="skills" class="skills">
         <div class="container">
-            <h2>My Skills</h2>
+            <h2 class="gradient-text-subtle glow-subtle">My Skills</h2>
             <p class="large-text">I work with a variety of technologies to create seamless experiences.</p>
             <div class="skills-container">
                 <div class="skills-category">
@@ -292,7 +302,7 @@
     <!-- Education Section -->
     <section id="education" class="education">
         <div class="container">
-            <h2>My Education</h2>
+            <h2 class="gradient-text-subtle glow-subtle">My Education</h2>
             <p class="large-text">Knowledge foundations that power my technical expertise and creative problem-solving approach.</p>
             <div class="timeline">
                 <div class="timeline-item fade-in">
@@ -310,13 +320,12 @@
                 </div>
             </div>
         </div>
-        <div class="accent-circle bottom-left"></div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2>Get In Touch</h2>
+            <h2 class="gradient-text-subtle glow-subtle">Get In Touch</h2>
             <div class="grid">
                 <div class="contact-content">
                     <p class="large-text">Interested in working together? Feel free to reach out!</p>

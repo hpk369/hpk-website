@@ -1,3 +1,90 @@
+// Custom Cursor - Arrow Pointer
+(function() {
+    const cursor = document.querySelector('.cursor');
+
+    if (!cursor) return;
+
+    // Update cursor position
+    document.addEventListener('mousemove', function(e) {
+        cursor.style.left = e.clientX + 'px';
+        cursor.style.top = e.clientY + 'px';
+    });
+
+    // Hover effects on interactive elements
+    const interactiveElements = document.querySelectorAll('a, button, .btn, .project-card, .skill-item, .social-link, .contact-item, .nav-link');
+
+    interactiveElements.forEach(el => {
+        el.addEventListener('mouseenter', () => {
+            cursor.classList.add('hover');
+        });
+
+        el.addEventListener('mouseleave', () => {
+            cursor.classList.remove('hover');
+        });
+    });
+
+    // Click effect
+    document.addEventListener('mousedown', () => {
+        cursor.classList.add('clicking');
+    });
+
+    document.addEventListener('mouseup', () => {
+        cursor.classList.remove('clicking');
+    });
+
+    // Hide cursor when leaving window
+    document.addEventListener('mouseleave', () => {
+        cursor.style.opacity = '0';
+    });
+
+    document.addEventListener('mouseenter', () => {
+        cursor.style.opacity = '1';
+    });
+})();
+
+// Smooth background parallax on mouse move
+(function() {
+    const bgGradient = document.querySelector('.bg-gradient');
+
+    if (bgGradient) {
+        document.addEventListener('mousemove', function(e) {
+            const mouseX = (e.clientX / window.innerWidth - 0.5) * 20;
+            const mouseY = (e.clientY / window.innerHeight - 0.5) * 20;
+
+            bgGradient.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
+        });
+    }
+})();
+
+// Mobile Menu Toggle
+(function() {
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const navLinks = document.querySelector('.nav-links');
+
+    if (mobileMenuBtn && navLinks) {
+        mobileMenuBtn.addEventListener('click', function() {
+            mobileMenuBtn.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu when clicking a link
+        navLinks.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function() {
+                mobileMenuBtn.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!navLinks.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+                mobileMenuBtn.classList.remove('active');
+                navLinks.classList.remove('active');
+            }
+        });
+    }
+})();
+
 // Fade-in animation on scroll
 document.addEventListener('DOMContentLoaded', function() {
     const fadeElements = document.querySelectorAll('.fade-in');
@@ -157,24 +244,3 @@ window.addEventListener('mousemove', (e) => {
     });
 });
 
-// Type writer effect for the name
-document.addEventListener('DOMContentLoaded', function() {
-    const heroTitle = document.querySelector('.hero h1');
-    
-    if (heroTitle) {
-        const originalText = heroTitle.textContent;
-        heroTitle.textContent = '';
-        
-        let charIndex = 0;
-        function typeWriter() {
-            if (charIndex < originalText.length) {
-                heroTitle.textContent += originalText.charAt(charIndex);
-                charIndex++;
-                setTimeout(typeWriter, Math.random() * 100 + 50); // Random typing speed for more natural effect
-            }
-        }
-        
-        // Start typewriter animation after a brief delay
-        setTimeout(typeWriter, 500);
-    }
-});
