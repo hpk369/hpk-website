@@ -479,9 +479,16 @@ nav {
 .about-image {
     grid-column: 9 / span 4;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .about-image img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
     border-radius: 20px;
     border: 1px solid var(--border-color);
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
