@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amber Blueprint Gear — Final</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: #08080b;
+    color: #e0e0e0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+  }
+
+  h1 { font-size: 1.5rem; font-weight: 600; color: #fff; margin-bottom: 4px; }
+  .subtitle { color: #555; font-size: 0.88rem; margin-bottom: 50px; }
+
+  .preview-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    max-width: 900px;
+    width: 100%;
+  }
+
+  .main-preview {
+    background: #111114;
+    border: 1px solid #1e1e24;
+    border-radius: 20px;
+    padding: 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    width: 100%;
+  }
+
+  .sizes-row {
+    display: flex;
+    align-items: flex-end;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .size-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .size-label {
+    font-size: 0.68rem;
+    color: #444;
+    letter-spacing: 0.08em;
+  }
+
+  .tab-mock {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #1a1a1f;
+    padding: 8px 16px;
+    border-radius: 8px 8px 0 0;
+    font-size: 0.78rem;
+    color: #888;
+  }
+  .tab-mock svg { width: 16px; height: 16px; }
+
+  .desc {
+    font-size: 0.85rem;
+    color: #666;
+    text-align: center;
+    line-height: 1.6;
+    max-width: 500px;
+  }
+
+  @keyframes spin-cw {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+</style>
+</head>
+<body>
+
+<h1>Amber Blueprint Gear</h1>
+<p class="subtitle">Single detailed gear — wireframe engineering aesthetic</p>
+
+<div class="preview-section">
+  <div class="main-preview">
+
+    <div class="sizes-row">
+      <!-- 512px large preview -->
+      <div class="size-item">
+        <svg width="180" height="180" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+          <rect width="512" height="512" rx="96" fill="#0c0c0f"/>
+          <!-- Subtle blueprint grid -->
+          <line x1="0" y1="128" x2="512" y2="128" stroke="#f59e0b" stroke-width="0.8" opacity="0.05"/>
+          <line x1="0" y1="256" x2="512" y2="256" stroke="#f59e0b" stroke-width="0.8" opacity="0.05"/>
+          <line x1="0" y1="384" x2="512" y2="384" stroke="#f59e0b" stroke-width="0.8" opacity="0.05"/>
+          <line x1="128" y1="0" x2="128" y2="512" stroke="#f59e0b" stroke-width="0.8" opacity="0.05"/>
+          <line x1="256" y1="0" x2="256" y2="512" stroke="#f59e0b" stroke-width="0.8" opacity="0.05"/>
+          <line x1="384" y1="0" x2="384" y2="512" stroke="#f59e0b" stroke-width="0.8" opacity="0.05"/>
+
+          <g style="animation: spin-cw 8s linear infinite; transform-origin: 256px 256px;">
+            <!-- Gear built with proper geometry: outer teeth ring -->
+            <!-- 12 teeth, each tooth is a trapezoid protruding from base circle r=150 to tip r=195 -->
+            <!-- Tooth width: 18deg, gap width: 12deg => 12 * 30deg = 360deg -->
+
+            <!-- Base circle (root) -->
+            <circle cx="256" cy="256" r="150" fill="none" stroke="#f59e0b" stroke-width="2.5" opacity="0.3"/>
+
+            <!-- Gear teeth as individual rects rotated around center -->
+            <!-- Each tooth: trapezoid from r=145 to r=195, angular width ~16deg -->
+            <g stroke="#f59e0b" fill="none" stroke-width="2.8" stroke-linejoin="round">
+              <!-- Tooth 1: 0deg -->
+              <path d="M256,61 L238,68 L235,106 L277,106 L274,68 Z" opacity="0.9"/>
+              <!-- Tooth 2: 30deg -->
+              <path d="M256,61 L238,68 L235,106 L277,106 L274,68 Z" transform="rotate(30,256,256)" opacity="0.9"/>
+              <!-- Tooth 3: 60deg -->
+              <path d="M256,61 L238,68 L235,106 L277,106 L274,68 Z" transform="rotate(60,256,256)" opacity="0.9"/>
+              <!-- Tooth 4: 90deg -->
+              <path d="M256,61 L238,68 L235,106 L277,106 L274,68 Z" transform="rotate(90,256,256)" opacity="0.9"/>
+              <!-- Tooth 5: 120deg -->
+              <path d="M256,61 L238,68 L235,106 L277,106 L274,68 Z" transform="rotate(120,256,256)" opacity="0.9"/>
+              <!-- Tooth 6: 150deg -->
+              <path d="M256,61 L238,68 L235,106 L277,106 L274,68 Z" transform="rotate(150,256,256)" opacity="0.9"/>
+              <!-- Tooth 7: 180deg -->
+              <path d="M256,61 L238,68 L235,106 L277,106 L274,68 Z" transform="rotate(180,256,256)" opacity="0.9"/>
+              <!-- Tooth 8: 210deg -->
+              <path d="M256,61 L238,68 L235,106 L277,106 L274,68 Z" transform="rotate(210,256,256)" opacity="0.9"/>
+              <!-- Tooth 9: 240deg -->
+              <path d="M256,61 L238,68 L235,106 L277,106 L274,68 Z" transform="rotate(240,256,256)" opacity="0.9"/>
+              <!-- Tooth 10: 270deg -->
+              <path d="M256,61 L238,68 L235,106 L277,106 L274,68 Z" transform="rotate(270,256,256)" opacity="0.9"/>
+              <!-- Tooth 11: 300deg -->
+              <path d="M256,61 L238,68 L235,106 L277,106 L274,68 Z" transform="rotate(300,256,256)" opacity="0.9"/>
+              <!-- Tooth 12: 330deg -->
+              <path d="M256,61 L238,68 L235,106 L277,106 L274,68 Z" transform="rotate(330,256,256)" opacity="0.9"/>
+            </g>
+
+            <!-- Outer rim circle connecting tooth bases -->
+            <circle cx="256" cy="256" r="106" fill="none" stroke="#f59e0b" stroke-width="2.5" opacity="0.5"/>
+
+            <!-- Inner structural ring -->
+            <circle cx="256" cy="256" r="80" fill="none" stroke="#f59e0b" stroke-width="2" opacity="0.35"/>
+
+            <!-- Spokes connecting inner ring to hub -->
+            <line x1="256" y1="196" x2="256" y2="216" stroke="#f59e0b" stroke-width="2" opacity="0.3"/>
+            <line x1="256" y1="296" x2="256" y2="316" stroke="#f59e0b" stroke-width="2" opacity="0.3"/>
+            <line x1="196" y1="256" x2="216" y2="256" stroke="#f59e0b" stroke-width="2" opacity="0.3"/>
+            <line x1="296" y1="256" x2="316" y2="256" stroke="#f59e0b" stroke-width="2" opacity="0.3"/>
+
+            <!-- Hub bearing ring -->
+            <circle cx="256" cy="256" r="44" fill="none" stroke="#f59e0b" stroke-width="2.5" opacity="0.6"/>
+
+            <!-- Inner hub -->
+            <circle cx="256" cy="256" r="28" fill="none" stroke="#f59e0b" stroke-width="2" opacity="0.5"/>
+
+            <!-- Crosshairs -->
+            <line x1="236" y1="256" x2="276" y2="256" stroke="#f59e0b" stroke-width="1.5" opacity="0.4"/>
+            <line x1="256" y1="236" x2="256" y2="276" stroke="#f59e0b" stroke-width="1.5" opacity="0.4"/>
+
+            <!-- Center dot -->
+            <circle cx="256" cy="256" r="5" fill="#f59e0b" opacity="0.9"/>
+          </g>
+        </svg>
+        <span class="size-label">512 × 512</span>
+      </div>
+
+      <!-- 96px -->
+      <div class="size-item">
+        <svg width="96" height="96" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+          <rect width="512" height="512" rx="96" fill="#0c0c0f"/>
+          <g style="animation: spin-cw 8s linear infinite; transform-origin: 256px 256px;">
+            <circle cx="256" cy="256" r="150" fill="none" stroke="#f59e0b" stroke-width="3" opacity="0.3"/>
+            <g stroke="#f59e0b" fill="none" stroke-width="3.5" stroke-linejoin="round">
+              <path d="M256,61 L238,68 L235,106 L277,106 L274,68 Z" opacity="0.9"/>
+              <path d="M256,61 L238,68 L235,106 L277,106 L274,68 Z" transform="rotate(30,256,256)" opacity="0.9"/>
+              <path d="M256,61 L238,68 L235,106 L277,106 L274,68 Z" transform="rotate(60,256,256)" opacity="0.9"/>
+              <path d="M256,61 L238,68 L235,106 L277,106 L274,68 Z" transform="rotate(90,256,256)" opacity="0.9"/>
+              <path d="M256,61 L238,68 L235,106 L277,106 L274,68 Z" transform="rotate(120,256,256)" opacity="0.9"/>
+              <path d="M256,61 L238,68 L235,106 L277,106 L274,68 Z" transform="rotate(150,256,256)" opacity="0.9"/>
+              <path d="M256,61 L238,68 L235,106 L277,106 L274,68 Z" transform="rotate(180,256,256)" opacity="0.9"/>
+              <path d="M256,61 L238,68 L235,106 L277,106 L274,68 Z" transform="rotate(210,256,256)" opacity="0.9"/>
+              <path d="M256,61 L238,68 L235,106 L277,106 L274,68 Z" transform="rotate(240,256,256)" opacity="0.9"/>
+              <path d="M256,61 L238,68 L235,106 L277,106 L274,68 Z" transform="rotate(270,256,256)" opacity="0.9"/>
+              <path d="M256,61 L238,68 L235,106 L277,106 L274,68 Z" transform="rotate(300,256,256)" opacity="0.9"/>
+              <path d="M256,61 L238,68 L235,106 L277,106 L274,68 Z" transform="rotate(330,256,256)" opacity="0.9"/>
+            </g>
+            <circle cx="256" cy="256" r="106" fill="none" stroke="#f59e0b" stroke-width="3" opacity="0.5"/>
+            <circle cx="256" cy="256" r="44" fill="none" stroke="#f59e0b" stroke-width="3" opacity="0.6"/>
+            <circle cx="256" cy="256" r="6" fill="#f59e0b" opacity="0.9"/>
+          </g>
+        </svg>
+        <span class="size-label">96 × 96</span>
+      </div>
+
+      <!-- 48px -->
+      <div class="size-item">
+        <svg width="48" height="48" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+          <rect width="512" height="512" rx="96" fill="#0c0c0f"/>
+          <g style="animation: spin-cw 8s linear infinite; transform-origin: 256px 256px;">
+            <g stroke="#f59e0b" fill="none" stroke-width="5" stroke-linejoin="round">
+              <path d="M256,61 L238,68 L235,106 L277,106 L274,68 Z" opacity="0.9"/>
+              <path d="M256,61 L238,68 L235,106 L277,106 L274,68 Z" transform="rotate(30,256,256)" opacity="0.9"/>
+              <path d="M256,61 L238,68 L235,106 L277,106 L274,68 Z" transform="rotate(60,256,256)" opacity="0.9"/>
+              <path d="M256,61 L238,68 L235,106 L277,106 L274,68 Z" transform="rotate(90,256,256)" opacity="0.9"/>
+              <path d="M256,61 L238,68 L235,106 L277,106 L274,68 Z" transform="rotate(120,256,256)" opacity="0.9"/>
+              <path d="M256,61 L238,68 L235,106 L277,106 L274,68 Z" transform="rotate(150,256,256)" opacity="0.9"/>
+              <path d="M256,61 L238,68 L235,106 L277,106 L274,68 Z" transform="rotate(180,256,256)" opacity="0.9"/>
+              <path d="M256,61 L238,68 L235,106 L277,106 L274,68 Z" transform="rotate(210,256,256)" opacity="0.9"/>
+              <path d="M256,61 L238,68 L235,106 L277,106 L274,68 Z" transform="rotate(240,256,256)" opacity="0.9"/>
+              <path d="M256,61 L238,68 L235,106 L277,106 L274,68 Z" transform="rotate(270,256,256)" opacity="0.9"/>
+              <path d="M256,61 L238,68 L235,106 L277,106 L274,68 Z" transform="rotate(300,256,256)" opacity="0.9"/>
+              <path d="M256,61 L238,68 L235,106 L277,106 L274,68 Z" transform="rotate(330,256,256)" opacity="0.9"/>
+            </g>
+            <circle cx="256" cy="256" r="106" fill="none" stroke="#f59e0b" stroke-width="5" opacity="0.5"/>
+            <circle cx="256" cy="256" r="44" fill="none" stroke="#f59e0b" stroke-width="4" opacity="0.6"/>
+            <circle cx="256" cy="256" r="8" fill="#f59e0b" opacity="0.9"/>
+          </g>
+        </svg>
+        <span class="size-label">48 × 48</span>
+      </div>
+
+      <!-- 32px -->
+      <div class="size-item">
+        <svg width="32" height="32" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+          <rect width="512" height="512" rx="96" fill="#0c0c0f"/>
+          <g style="animation: spin-cw 8s linear infinite; transform-origin: 256px 256px;">
+            <g stroke="#f59e0b" fill="none" stroke-width="8" stroke-linejoin="round">
+              <path d="M256,61 L238,68 L235,106 L277,106 L274,68 Z" opacity="0.9"/>
+              <path d="M256,61 L238,68 L235,106 L277,106 L274,68 Z" transform="rotate(30,256,256)" opacity="0.9"/>
+              <path d="M256,61 L238,68 L235,106 L277,106 L274,68 Z" transform="rotate(60,256,256)" opacity="0.9"/>
+              <path d="M256,61 L238,68 L235,106 L277,106 L274,68 Z" transform="rotate(90,256,256)" opacity="0.9"/>
+              <path d="M256,61 L238,68 L235,106 L277,106 L274,68 Z" transform="rotate(120,256,256)" opacity="0.9"/>
+              <path d="M256,61 L238,68 L235,106 L277,106 L274,68 Z" transform="rotate(150,256,256)" opacity="0.9"/>
+              <path d="M256,61 L238,68 L235,106 L277,106 L274,68 Z" transform="rotate(180,256,256)" opacity="0.9"/>
+              <path d="M256,61 L238,68 L235,106 L277,106 L274,68 Z" transform="rotate(210,256,256)" opacity="0.9"/>
+              <path d="M256,61 L238,68 L235,106 L277,106 L274,68 Z" transform="rotate(240,256,256)" opacity="0.9"/>
+              <path d="M256,61 L238,68 L235,106 L277,106 L274,68 Z" transform="rotate(270,256,256)" opacity="0.9"/>
+              <path d="M256,61 L238,68 L235,106 L277,106 L274,68 Z" transform="rotate(300,256,256)" opacity="0.9"/>
+              <path d="M256,61 L238,68 L235,106 L277,106 L274,68 Z" transform="rotate(330,256,256)" opacity="0.9"/>
+            </g>
+            <circle cx="256" cy="256" r="106" fill="none" stroke="#f59e0b" stroke-width="7" opacity="0.5"/>
+            <circle cx="256" cy="256" r="44" fill="none" stroke="#f59e0b" stroke-width="6" opacity="0.6"/>
+            <circle cx="256" cy="256" r="10" fill="#f59e0b" opacity="0.9"/>
+          </g>
+        </svg>
+        <span class="size-label">32 × 32</span>
+      </div>
+
+      <!-- 16px -->
+      <div class="size-item">
+        <svg width="16" height="16" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+          <rect width="512" height="512" rx="96" fill="#0c0c0f"/>
+          <g stroke="#f59e0b" fill="none" stroke-width="14" stroke-linejoin="round">
+            <path d="M256,61 L238,68 L235,106 L277,106 L274,68 Z" opacity="0.9"/>
+            <path d="M256,61 L238,68 L235,106 L277,106 L274,68 Z" transform="rotate(30,256,256)" opacity="0.9"/>
+            <path d="M256,61 L238,68 L235,106 L277,106 L274,68 Z" transform="rotate(60,256,256)" opacity="0.9"/>
+            <path d="M256,61 L238,68 L235,106 L277,106 L274,68 Z" transform="rotate(90,256,256)" opacity="0.9"/>
+            <path d="M256,61 L238,68 L235,106 L277,106 L274,68 Z" transform="rotate(120,256,256)" opacity="0.9"/>
+            <path d="M256,61 L238,68 L235,106 L277,106 L274,68 Z" transform="rotate(150,256,256)" opacity="0.9"/>
+            <path d="M256,61 L238,68 L235,106 L277,106 L274,68 Z" transform="rotate(180,256,256)" opacity="0.9"/>
+            <path d="M256,61 L238,68 L235,106 L277,106 L274,68 Z" transform="rotate(210,256,256)" opacity="0.9"/>
+            <path d="M256,61 L238,68 L235,106 L277,106 L274,68 Z" transform="rotate(240,256,256)" opacity="0.9"/>
+            <path d="M256,61 L238,68 L235,106 L277,106 L274,68 Z" transform="rotate(270,256,256)" opacity="0.9"/>
+            <path d="M256,61 L238,68 L235,106 L277,106 L274,68 Z" transform="rotate(300,256,256)" opacity="0.9"/>
+            <path d="M256,61 L238,68 L235,106 L277,106 L274,68 Z" transform="rotate(330,256,256)" opacity="0.9"/>
+          </g>
+          <circle cx="256" cy="256" r="106" fill="none" stroke="#f59e0b" stroke-width="12" opacity="0.5"/>
+          <circle cx="256" cy="256" r="14" fill="#f59e0b" opacity="0.9"/>
+        </svg>
+        <span class="size-label">16 × 16</span>
+      </div>
+    </div>
+
+    <!-- Tab mock -->
+    <div class="tab-mock">
+      <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+        <rect width="512" height="512" rx="96" fill="#0c0c0f"/>
+        <g stroke="#f59e0b" fill="none" stroke-width="10" stroke-linejoin="round">
+          <path d="M256,61 L238,68 L235,106 L277,106 L274,68 Z"/>
+          <path d="M256,61 L238,68 L235,106 L277,106 L274,68 Z" transform="rotate(30,256,256)"/>
+          <path d="M256,61 L238,68 L235,106 L277,106 L274,68 Z" transform="rotate(60,256,256)"/>
+          <path d="M256,61 L238,68 L235,106 L277,106 L274,68 Z" transform="rotate(90,256,256)"/>
+          <path d="M256,61 L238,68 L235,106 L277,106 L274,68 Z" transform="rotate(120,256,256)"/>
+          <path d="M256,61 L238,68 L235,106 L277,106 L274,68 Z" transform="rotate(150,256,256)"/>
+          <path d="M256,61 L238,68 L235,106 L277,106 L274,68 Z" transform="rotate(180,256,256)"/>
+          <path d="M256,61 L238,68 L235,106 L277,106 L274,68 Z" transform="rotate(210,256,256)"/>
+          <path d="M256,61 L238,68 L235,106 L277,106 L274,68 Z" transform="rotate(240,256,256)"/>
+          <path d="M256,61 L238,68 L235,106 L277,106 L274,68 Z" transform="rotate(270,256,256)"/>
+          <path d="M256,61 L238,68 L235,106 L277,106 L274,68 Z" transform="rotate(300,256,256)"/>
+          <path d="M256,61 L238,68 L235,106 L277,106 L274,68 Z" transform="rotate(330,256,256)"/>
+        </g>
+        <circle cx="256" cy="256" r="106" fill="none" stroke="#f59e0b" stroke-width="9" opacity="0.5"/>
+        <circle cx="256" cy="256" r="44" fill="none" stroke="#f59e0b" stroke-width="7" opacity="0.6"/>
+        <circle cx="256" cy="256" r="10" fill="#f59e0b"/>
+      </svg>
+      Harsh — Portfolio
+    </div>
+
+    <div class="desc">Single precision gear with 12 trapezoidal teeth, inner bearing ring, hub crosshairs, and center pivot. Wireframe amber on dark — clean engineering blueprint aesthetic.</div>
+  </div>
+</div>
+
+</body>
+</html>
