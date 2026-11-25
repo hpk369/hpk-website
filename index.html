@@ -84,6 +84,28 @@
             <h2 class="gradient-text-subtle glow-subtle">Featured Projects</h2>
             <p class="large-text">Here are some of my recent works.</p>
             <div class="projects-grid">
+                <div class="project-card fade-in">
+                    <div class="project-image">
+                        <img src="images/northlake_insights.png" alt="Northlake CIB Performance Insights Agent demo">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Northlake CIB Performance Insights Agent</h3>
+                        <p class="project-desc">An AI agent that tells corporate and investment banking leaders why a KPI moved and where the opportunity is, built on Databricks for a fictional bank. Every number comes from governed Unity Catalog SQL functions (the model never writes SQL), definitions come from RAG over the bank&#39;s glossary, and each answer passes a number check against the tool results before it is shown. Evaluated in MLflow on 15 questions with planted answers; daily data-quality and reconciliation controls feed a Power BI executive dashboard.</p>
+                        <div class="project-tags">
+                            <span class="tag">Databricks</span>
+                            <span class="tag">Unity Catalog</span>
+                            <span class="tag">Vector Search</span>
+                            <span class="tag">LangGraph</span>
+                            <span class="tag">MLflow</span>
+                            <span class="tag">Power BI</span>
+                            <span class="tag">Python</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://insights.inkandinfra.com" class="project-link">Live Demo</a>
+                            <a href="https://github.com/hpk369/northlake-cib-insights-agent" class="project-link">Source Code</a>
+                        </div>
+                    </div>
+                </div>
 
                 <div class="project-card fade-in">
                     <div class="project-image">
@@ -124,29 +146,6 @@
                         <div class="project-links">
                             <a href="https://hpk369.github.io/CineMatch/" class="project-link">Live Demo</a>
                             <a href="https://github.com/hpk369/CineMatch" class="project-link">Source Code</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card fade-in">
-                    <div class="project-image">
-                        <img src="images/QA_bot.gif" alt="AI Agent QA Pipeline">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">AI Agent QA Pipeline: n8n + Robot Framework + pytest</h3>
-                        <p class="project-desc">An AI-powered quality assurance agent orchestrated via n8n that monitors a mock Big Data pipeline, reasons over tool outputs using Claude in tool-use mode, and routes to the appropriate test framework based on its verdict: Robot Framework for E2E acceptance on PASS, pytest for regression on FAIL.</p>
-                        <div class="project-tags">
-                            <span class="tag">n8n</span>
-                            <span class="tag">Claude API</span>
-                            <span class="tag">Python</span>
-                            <span class="tag">FastAPI</span>
-                            <span class="tag">Robot Framework</span>
-                            <span class="tag">pytest</span>
-                            <span class="tag">Docker</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://hpk369.github.io/ai-qa-agent/" class="project-link">Live Demo</a>
-                            <a href="https://github.com/hpk369/ai-qa-agent" class="project-link">Source Code</a>
                         </div>
                     </div>
                 </div>
@@ -195,24 +194,25 @@
                     </div>
                 </div>
 
+
                 <div class="project-card fade-in">
                     <div class="project-image">
-                        <img src="images/amazon_project.gif" alt="Project 2">
+                        <img src="images/northlake_deal_pricing.png" alt="Northlake Deal Pricing Agent demo">
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title">Amazon Clone E-Commerce Web Application</h3>
-                        <p class="project-desc">Engineered a fully functional Amazon-inspired e-commerce platform implementing responsive design principles and interactive UI components.</p>
+                        <h3 class="project-title">Northlake Deal Pricing Agent</h3>
+                        <p class="project-desc">A Microsoft Copilot Studio agent that prices corporate loans for a fictional bank. RAROC is calculated deterministically in a Power Automate flow, never by the language model; policy questions are answered with clause-level citations; deals below the hurdle or with policy exceptions go to a human approver; and every request is written to a Dataverse audit log. A Python reference model with pytest checks the pricing logic in CI.</p>
                         <div class="project-tags">
-                            <span class="tag">JavaScript ES6</span>
-                            <span class="tag">HTML5</span>
-                            <span class="tag">CSS3</span>
-                            <span class="tag">DOM Manipulation</span>
-                            <span class="tag">Web APIs</span>
-                            <span class="tag">Front-end Development</span>
+                            <span class="tag">Copilot Studio</span>
+                            <span class="tag">Power Automate</span>
+                            <span class="tag">Dataverse</span>
+                            <span class="tag">Approvals</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">pytest</span>
                         </div>
                         <div class="project-links">
-                            <!-- <a href="#" class="project-link">View Demo</a> -->
-                            <a href="https://github.com/hpk369/javascript-amazon-project" class="project-link">Source Code</a>
+                            <a href="https://deals.inkandinfra.com" class="project-link">Live Demo</a>
+                            <a href="https://github.com/hpk369/northlake-deal-pricing-agent" class="project-link">Source Code</a>
                         </div>
                     </div>
                 </div>
